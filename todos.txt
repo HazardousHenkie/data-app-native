@@ -1,0 +1,6 @@
+// testing libraries 
+// all other libraries
+// resolve src
+// add splashscreen
+// add material ui
+// check auto 91next parser in native

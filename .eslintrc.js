@@ -43,6 +43,7 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/unbound-method': 'warn',
         'spaced-comment': 'off',
+        '@typescript-eslint/naming-convention': 'off',
         'import/no-extraneous-dependencies': [
             'error',
             {

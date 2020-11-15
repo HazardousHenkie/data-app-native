@@ -1,8 +1,14 @@
 import React from 'react'
+
 import styled from 'styled-components/native'
+
 import { View, Text } from 'react-native'
 import MapView from 'react-native-maps'
+import { Provider as PaperProvider } from 'react-native-paper'
 import Title from '../../components/title'
+
+import useDarkMode from './useDarkMode'
+import useTheme from './useTheme'
 
 const Container = styled(View)`
     flex: 1;
@@ -12,16 +18,21 @@ const Container = styled(View)`
 `
 
 const App: React.FC = () => {
-    return (
-        <Container>
-            <Title>
-                <Text>Expo with Styled Components</Text>
-            </Title>
+    // TODO: add setDarkMode
+    const { darkMode } = useDarkMode()
+    const { theme } = useTheme(darkMode)
 
-            <MapView
-            //  style={{ width: '100%', height: '100%' }}
-            />
-        </Container>
+    return (
+        <PaperProvider theme={theme}>
+            <Container>
+                <Title>
+                    <Text>Expo with Styled Components</Text>
+                </Title>
+
+                {/* // TODO: add styling to map style={{ width: '100%', height: '100%' }}  */}
+                <MapView />
+            </Container>
+        </PaperProvider>
     )
 }
 

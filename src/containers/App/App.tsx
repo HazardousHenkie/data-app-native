@@ -9,6 +9,7 @@ import Title from '../../components/title'
 
 import useDarkMode from './useDarkMode'
 import useTheme from './useTheme'
+// import SideDrawer from '../../components/Organisms/SideDrawer'
 
 const Container = styled(View)`
     flex: 1;
@@ -25,8 +26,9 @@ const App: React.FC = () => {
     return (
         <PaperProvider theme={theme}>
             <Container>
+                {/* <SideDrawer /> */}
                 <Title>
-                    <Text>Expo with Styled Components</Text>
+                    <Text>test with Styled Components</Text>
                 </Title>
 
                 {/* // TODO: add styling to map style={{ width: '100%', height: '100%' }}  */}

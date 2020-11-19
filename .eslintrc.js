@@ -44,6 +44,7 @@ module.exports = {
         '@typescript-eslint/unbound-method': 'warn',
         'spaced-comment': 'off',
         '@typescript-eslint/naming-convention': 'off',
+        '@typescript-eslint/unbound-method': 'off',
         'import/no-extraneous-dependencies': [
             'error',
             {

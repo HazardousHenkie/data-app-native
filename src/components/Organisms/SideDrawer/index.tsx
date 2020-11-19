@@ -1,43 +1,80 @@
 import React from 'react'
 
-import { createDrawerNavigator } from '@react-navigation/drawer'
-import { NavigationContainer } from '@react-navigation/native'
+import {
+    createDrawerNavigator,
+    DrawerContentComponentProps,
+    DrawerContentOptions,
+    DrawerContentScrollView,
+    DrawerItemList,
+} from '@react-navigation/drawer'
+import { DrawerActions, useNavigation } from '@react-navigation/native'
 
-import IconButtonStyled, { DrawerChildren } from './styledComponents'
+import { Text, View } from 'react-native'
+import MapView from 'react-native-maps'
+import IconButtonStyled from './styledComponents'
 
-const SideDrawer: React.FC = ({ children }) => {
-    const Drawer = createDrawerNavigator()
+// TODO: move to seperate component and add
+const CustomDrawerContent = (
+    props: DrawerContentComponentProps<DrawerContentOptions>
+) => {
+    return (
+        <DrawerContentScrollView {...props}>
+            <DrawerItemList {...props} />
+            <Text>test</Text>
+        </DrawerContentScrollView>
+    )
+}
 
-    // const openDrawer = ({ navigation }) => {
-    //     navigation.openDrawer()
-    // }
+// TODO: move te screens folder
+const AboutScreen = () => {
+    return (
+        <View>
+            <Text>about</Text>
+        </View>
+    )
+}
 
-    // const closeDrawer = ({ navigation }) => {
-    //     navigation.closeDrawer()
+// TODO: move te screens folder
+const HomeScreen = () => {
+    const { dispatch } = useNavigation()
+
+    const openDrawer = () => {
+        console.log('click')
+        dispatch(DrawerActions.openDrawer())
+    }
+
+    // const closeDrawer = () => {
+    //     dispatch(DrawerActions.openDrawer())
     // }
 
     return (
-        <>
-            {/* tst */}
-            <NavigationContainer>
-                <IconButtonStyled
-                    icon="menu"
-                    data-testid="IconButtonStyled"
-                    color="inherit"
-                    aria-label="open drawer"
-                    // onPress={() => openDrawer}
-                    // edge="start"
-                />
+        <View>
+            <IconButtonStyled
+                icon="menu"
+                data-testid="IconButtonStyled"
+                aria-label="open drawer"
+                onPress={() => openDrawer()}
+            />
 
-                <Drawer.Navigator
-                // data-testid="StyledDrawer"
-                // anchor="left"
-                // open={openDrawer}
-                // onClose={() => setOpenDrawer(false)}
-                >
-                    <DrawerChildren>{children}</DrawerChildren>
-                </Drawer.Navigator>
-            </NavigationContainer>
+            {/* // TODO: add styling to map style={{ width: '100%', height: '100%' }}  */}
+            <MapView />
+            {/* <DrawerChildren>{children}</DrawerChildren> */}
+        </View>
+    )
+}
+
+// TODO: rename to drawer
+const SideDrawer: React.FC = () => {
+    const Drawer = createDrawerNavigator()
+
+    return (
+        <>
+            <Drawer.Navigator
+                drawerContent={(props) => <CustomDrawerContent {...props} />}
+            >
+                <Drawer.Screen name="Home" component={HomeScreen} />
+                <Drawer.Screen name="About" component={AboutScreen} />
+            </Drawer.Navigator>
         </>
     )
 }

@@ -1,0 +1,16 @@
+{
+    "name": "data-app",
+    "displayName": "data-app",
+    "expo": {
+        "name": "data-app",
+        "slug": "data-app",
+        "orientation": "portrait",
+        "platforms": ["ios", "android"],
+        "description": "native data app",
+        "scheme": "ninpath",
+        "privacy": "unlisted",
+        "userInterfaceStyle": "automatic",
+        "version": "0.0.1",
+        "assetBundlePatterns": ["**/*"]
+    }
+}

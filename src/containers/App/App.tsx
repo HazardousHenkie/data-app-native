@@ -8,7 +8,6 @@ import { Text, View } from 'react-native'
 import SideDrawer from '../../components/Organisms/SideDrawer'
 
 import darkTheme from '../../styles/themeStyles'
-import LanguageSwitcher from '../../components/Molecules/LanguageSwitcher'
 
 const App: React.FC = () => {
     const { t } = useTranslation('app')
@@ -18,7 +17,6 @@ const App: React.FC = () => {
             <PaperProvider theme={darkTheme}>
                 <View>
                     <Text>{t('descriptionTitle')}</Text>
-                    <LanguageSwitcher />
                 </View>
                 <SideDrawer />
             </PaperProvider>

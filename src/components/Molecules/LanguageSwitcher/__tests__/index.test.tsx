@@ -11,16 +11,6 @@
 //         expect(component).toMatchSnapshot()
 //     })
 
-//     it("Shouldn't be initially disabled", () => {
-//         const { getByTestId } = render(<LanguageSwitcher />)
-
-//         const selectBox = getByTestId('languageSwitcher_select')
-
-//         const selectBoxButton = within(selectBox).getByRole('button')
-
-//         expect(selectBoxButton).not.toHaveAttribute('aria-disabled', 'true')
-//     })
-
 //     it("gets initial language and it's being passed", () => {
 //         const { container } = render(<LanguageSwitcher />)
 

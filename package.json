@@ -9,8 +9,6 @@
     "expo": "~39.0.0",
     "expo-localization": "^9.0.0",
     "i18next": "^19.8.3",
-    "i18next-browser-languagedetector": "^6.0.1",
-    "i18next-http-backend": "^1.0.21",
     "react": "~16.13.0",
     "react-dom": "~16.13.0",
     "react-i18next": "^11.7.3",

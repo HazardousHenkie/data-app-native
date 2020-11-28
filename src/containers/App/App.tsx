@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <NavigationContainer>
             <PaperProvider theme={darkTheme}>
                 <View>
-                    <Text>{t('descriptionTitle')}</Text>
+                    <Text>{t('app:descriptionTitle', 'test')}</Text>
                 </View>
                 <SideDrawer />
             </PaperProvider>

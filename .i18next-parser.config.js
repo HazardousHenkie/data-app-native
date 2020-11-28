@@ -1,4 +1,10 @@
 module.exports = {
+    contextSeparator: '_',
+    defaultNamespace: 'translation',
+    defaultValue: '',
+    keySeparator: ':',
+    namespaceSeparator: '.',
+    indentation: 2,
     createOldCatalogs: true,
     indentation: 2,
     lexers: {
@@ -8,9 +14,14 @@ module.exports = {
         tsx: ['JsxLexer'],
         default: ['JsxLexer'],
     },
+    lineEnding: 'auto',
     locales: ['en', 'ja', 'nl'],
-    output: './translations/locales/$LOCALE/$NAMESPACE.json',
+    output: './translations/locales/$LOCALE.json',
     input: ['src/**/*.{ts,tsx}'],
     verbose: true,
     reactNamespace: false,
+    sort: false,
+    skipDefaultValues: false,
+    useKeysAsDefaultValue: false,
+    customValueTemplate: null,
 }

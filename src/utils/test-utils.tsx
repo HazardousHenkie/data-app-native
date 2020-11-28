@@ -1,57 +1,47 @@
-// import React from 'react'
-// import { render } from '@testing-library/react-native'
+import React from 'react'
+import { render } from '@testing-library/react-native'
 
-// import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
 
-// import variables from 'styles/variables'
-// import { ThemeProvider } from 'styled-components'
-// import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
-// import lightTheme from 'styles/themeStyles'
-// import ThemeContext from 'components/Atoms/ThemeSwitcher/ThemeContext'
+import { ThemeProvider } from 'styled-components'
+import { Provider as PaperProvider } from 'react-native-paper'
 
-// import { I18nextProvider } from 'react-i18next'
+import { I18nextProvider } from 'react-i18next'
 
-// import i18n from './i18nTesting'
-// import configureStore from 'store/configureStore'
+import i18n from './i18nTesting'
 
-// const customRender = (
-//     ui: React.ReactElement,
-//     {
-//         initialState = {},
-//         store = configureStore(initialState),
-//         ...renderOptions
-//     } = {},
-//     darkMode = false
-// ) => {
-//     const Wrapper: React.FC = ({ children }) => {
-//         return (
-//             <Provider store={store}>
-//                 <I18nextProvider i18n={i18n}>
-//                     <ThemeProvider theme={variables}>
-//                         <MuiThemeProvider theme={lightTheme}>
-//                             <ThemeProvider theme={lightTheme}>
-//                                 <ThemeContext.Provider
-//                                     value={{
-//                                         darkMode,
-//                                         setDarkMode: () => {},
-//                                     }}
-//                                 >
-//                                     {children}
-//                                 </ThemeContext.Provider>
-//                             </ThemeProvider>
-//                         </MuiThemeProvider>
-//                     </ThemeProvider>
-//                 </I18nextProvider>
-//             </Provider>
-//         )
-//     }
+import darkTheme from '../styles/themeStyles'
+import variables from '../styles/variables'
+import configureStore from '../store/configureStore'
 
-//     return render(ui, {
-//         wrapper: Wrapper,
-//         ...renderOptions,
-//     })
-// }
+const customRender = (
+    ui: React.ReactElement,
+    {
+        initialState = {},
+        store = configureStore(initialState),
+        ...renderOptions
+    } = {}
+) => {
+    const Wrapper: React.FC = ({ children }) => {
+        return (
+            <Provider store={store}>
+                <I18nextProvider i18n={i18n}>
+                    <ThemeProvider theme={variables}>
+                        <PaperProvider theme={darkTheme}>
+                            {children}
+                        </PaperProvider>
+                    </ThemeProvider>
+                </I18nextProvider>
+            </Provider>
+        )
+    }
 
-// export * from '@testing-library/react'
+    return render(ui, {
+        wrapper: Wrapper,
+        ...renderOptions,
+    })
+}
 
-// export { customRender as render }
+export * from '@testing-library/react-native'
+
+export { customRender as render }

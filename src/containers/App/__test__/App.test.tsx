@@ -8,71 +8,46 @@
 // import configureStore from 'store/configureStore'
 
 // import mockFetch, { mockFetchCleanUp } from 'utils/request-test-utils'
-// import useDarkMode from '../useDarkMode'
 
 // import App from '../App'
+import { mockFetchCleanUp } from '../../../utils/request-test-utils'
 
-// jest.mock('../useDarkMode')
+describe('<App />', () => {
+    afterEach(() => {
+        mockFetchCleanUp()
+    })
 
-// describe('<App />', () => {
-//     beforeEach(() => {
-//         mockFetch({})
-//         ;(useDarkMode as jest.Mock).mockReturnValue({ darkMode: false })
-//     })
+    // it('should dispatch getRefreshTokenRequest when localStorage.getItem is set', () => {
+    //     const store = configureStore({ authenticationData: { loggedIn: true } })
+    //     const userId = '12'
 
-//     afterEach(() => {
-//         mockFetchCleanUp()
-//     })
+    //     store.dispatch = jest.fn()
+    //     localStorage.setItem('userId', userId)
 
-//     it('should dispatch getRefreshTokenRequest when localStorage.getItem is set', () => {
-//         const store = configureStore({ authenticationData: { loggedIn: true } })
-//         const userId = '12'
+    //     render(<App />, { store })
 
-//         store.dispatch = jest.fn()
-//         localStorage.setItem('userId', userId)
+    //     expect(store.dispatch).toHaveBeenCalledWith(
+    //         getRefreshTokenRequest(userId)
+    //     )
+    // })
 
-//         render(<App />, { store })
+    // it('should dispatch getFavoritedCountries when loggedIn', () => {
+    //     const store = configureStore({ authenticationData: { loggedIn: true } })
 
-//         expect(store.dispatch).toHaveBeenCalledWith(
-//             getRefreshTokenRequest(userId)
-//         )
-//     })
+    //     store.dispatch = jest.fn()
 
-//     it("shouldn't have darkmode from the start", () => {
-//         const { getByTestId } = render(<App />)
+    //     render(<App />, {
+    //         store,
+    //     })
 
-//         const appDiv = getByTestId('app')
+    //     expect(store.dispatch).toHaveBeenCalledWith(getFavoritedCountries())
+    // })
 
-//         expect(appDiv).not.toHaveClass('darkMode')
-//     })
+    // it('should load ErrorSnackbars', () => {
+    //     const { getByTestId } = render(<App />)
 
-//     it('should have darkmode when userPrefersDarkMode is true', () => {
-//         ;(useDarkMode as jest.Mock).mockReturnValue({ darkMode: true })
+    //     const ErrorSnackbars = getByTestId('ErrorsSnackbarComponent')
 
-//         const { getByTestId } = render(<App />)
-
-//         const appDiv = getByTestId('app')
-
-//         expect(appDiv).toHaveClass('App darkmode')
-//     })
-
-//     it('should dispatch getFavoritedCountries when loggedIn', () => {
-//         const store = configureStore({ authenticationData: { loggedIn: true } })
-
-//         store.dispatch = jest.fn()
-
-//         render(<App />, {
-//             store
-//         })
-
-//         expect(store.dispatch).toHaveBeenCalledWith(getFavoritedCountries())
-//     })
-
-//     it('should load ErrorSnackbars', () => {
-//         const { getByTestId } = render(<App />)
-
-//         const ErrorSnackbars = getByTestId('ErrorsSnackbarComponent')
-
-//         expect(ErrorSnackbars).toBeInTheDocument()
-//     })
-// })
+    //     expect(ErrorSnackbars).toBeInTheDocument()
+    // })
+})

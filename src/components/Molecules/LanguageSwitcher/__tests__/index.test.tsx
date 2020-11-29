@@ -1,18 +1,22 @@
-// import React from 'react'
-// import { render, within, fireEvent } from '../../../../utils/test-utils'
+import React from 'react'
 
-// import LanguageSwitcher from '../index'
+import { render } from '../../../../utils/test-utils'
+
+import LanguageSwitcher from '../index'
 
 describe('<LanguageSwitcher />', () => {
-    // it('Should render like snapshot', () => {
-    //     const component = render(<LanguageSwitcher />)
-    //     expect(component).toMatchSnapshot()
-    // })
+    it('Should render like snapshot', () => {
+        const component = render(<LanguageSwitcher />)
+        expect(component).toMatchSnapshot()
+    })
+
     // it("gets initial language and it's being passed", () => {
-    //     const { container } = render(<LanguageSwitcher />)
-    //     const selectInput = container.querySelector('input')
+    //     const { getByText } = render(<LanguageSwitcher />)
+    //     const selectInput = getByText('en')
+    //     console.log(selectInput)
     //     expect(selectInput).toHaveProperty('value', 'en')
     // })
+
     // it('Check if language changes after select', () => {
     //     const { getByRole, container } = render(<LanguageSwitcher />)
     //     fireEvent.mouseDown(getByRole('button'))

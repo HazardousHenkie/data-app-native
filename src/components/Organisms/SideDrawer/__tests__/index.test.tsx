@@ -5,51 +5,50 @@
 
 // import SideDrawer from '../index'
 
-// describe('<SideDrawer />', () => {
-//     it('should render like snapshot', () => {
-//         const component = render(<SideDrawer />)
+describe('<SideDrawer />', () => {
+    it('should render like snapshot', () => {
+        //         const component = render(<SideDrawer />)
+        //         expect(component).toMatchSnapshot()
+    })
 
-//         expect(component).toMatchSnapshot()
-//     })
+    //     it('should render IconButtonStyled', () => {
+    //         const { getByTestId } = render(<SideDrawer />)
 
-//     it('should render IconButtonStyled', () => {
-//         const { getByTestId } = render(<SideDrawer />)
+    //         const IconButtonStyled = getByTestId('IconButtonStyled')
 
-//         const IconButtonStyled = getByTestId('IconButtonStyled')
+    //         expect(IconButtonStyled).toBeInTheDocument()
+    //     })
 
-//         expect(IconButtonStyled).toBeInTheDocument()
-//     })
+    //     it('should render aria-label on IconButtonStyled', () => {
+    //         const { getByLabelText } = render(<SideDrawer />)
 
-//     it('should render aria-label on IconButtonStyled', () => {
-//         const { getByLabelText } = render(<SideDrawer />)
+    //         const listLabel = getByLabelText('open drawer')
 
-//         const listLabel = getByLabelText('open drawer')
+    //         expect(listLabel).toBeInTheDocument()
+    //     })
 
-//         expect(listLabel).toBeInTheDocument()
-//     })
+    //     it('should render StyledDrawer when IconButtonStyled is clicked', () => {
+    //         const { getByTestId } = render(<SideDrawer />)
 
-//     it('should render StyledDrawer when IconButtonStyled is clicked', () => {
-//         const { getByTestId } = render(<SideDrawer />)
+    //         const IconButtonStyled = getByTestId('IconButtonStyled')
+    //         fireEvent.click(IconButtonStyled)
+    //         const StyledDrawerButton = getByTestId('StyledDrawer')
 
-//         const IconButtonStyled = getByTestId('IconButtonStyled')
-//         fireEvent.click(IconButtonStyled)
-//         const StyledDrawerButton = getByTestId('StyledDrawer')
+    //         expect(StyledDrawerButton).toBeInTheDocument()
+    //     })
 
-//         expect(StyledDrawerButton).toBeInTheDocument()
-//     })
+    //     it('It shouldn render StyledDrawer DrawerChildren', () => {
+    //         const { getByText, getByTestId } = render(
+    //             <SideDrawer>
+    //                 <StyledDrawer anchor="left" open>
+    //                     <DrawerChildren>children</DrawerChildren>
+    //                 </StyledDrawer>
+    //             </SideDrawer>
+    //         )
 
-//     it('It shouldn render StyledDrawer DrawerChildren', () => {
-//         const { getByText, getByTestId } = render(
-//             <SideDrawer>
-//                 <StyledDrawer anchor="left" open>
-//                     <DrawerChildren>children</DrawerChildren>
-//                 </StyledDrawer>
-//             </SideDrawer>
-//         )
+    //         const IconButtonStyled = getByTestId('IconButtonStyled')
+    //         fireEvent.click(IconButtonStyled)
 
-//         const IconButtonStyled = getByTestId('IconButtonStyled')
-//         fireEvent.click(IconButtonStyled)
-
-//         expect(getByText('children')).toBeInTheDocument()
-//     })
-// })
+    //         expect(getByText('children')).toBeInTheDocument()
+    //     })
+})

@@ -10,26 +10,23 @@
 // import mockFetch, { mockFetchCleanUp } from 'utils/request-test-utils'
 
 // import App from '../App'
-import { mockFetchCleanUp } from '../../../utils/request-test-utils'
+// import { mockFetchCleanUp } from '../../../utils/request-test-utils'
 
 describe('<App />', () => {
-    afterEach(() => {
-        mockFetchCleanUp()
-    })
-
-    // it('should dispatch getRefreshTokenRequest when localStorage.getItem is set', () => {
-    //     const store = configureStore({ authenticationData: { loggedIn: true } })
-    //     const userId = '12'
-
-    //     store.dispatch = jest.fn()
-    //     localStorage.setItem('userId', userId)
-
-    //     render(<App />, { store })
-
-    //     expect(store.dispatch).toHaveBeenCalledWith(
-    //         getRefreshTokenRequest(userId)
-    //     )
+    // afterEach(() => {
+    //     mockFetchCleanUp()
     // })
+
+    it('should dispatch getRefreshTokenRequest when localStorage.getItem is set', () => {
+        //     const store = configureStore({ authenticationData: { loggedIn: true } })
+        //     const userId = '12'
+        //     store.dispatch = jest.fn()
+        //     localStorage.setItem('userId', userId)
+        //     render(<App />, { store })
+        //     expect(store.dispatch).toHaveBeenCalledWith(
+        //         getRefreshTokenRequest(userId)
+        //     )
+    })
 
     // it('should dispatch getFavoritedCountries when loggedIn', () => {
     //     const store = configureStore({ authenticationData: { loggedIn: true } })

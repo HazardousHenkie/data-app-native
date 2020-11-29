@@ -15,15 +15,15 @@
 
 describe('signInSaga Saga', () => {
     // const authenticationRootSagaData = authenticationRootSaga()
-    // it('should start task to watch for GET_REFRESH_TOKEN_REQUEST action.', () => {
-    //     const takeLatestDescriptor = authenticationRootSagaData.next().value
-    //     expect(takeLatestDescriptor).toEqual(
-    //         takeLatest(
-    //             ActionTypesRefreshToken.GET_REFRESH_TOKEN_REQUEST,
-    //             refreshTokenSaga
-    //         )
-    //     )
-    // })
+    it('should start task to watch for GET_REFRESH_TOKEN_REQUEST action.', () => {
+        //     const takeLatestDescriptor = authenticationRootSagaData.next().value
+        //     expect(takeLatestDescriptor).toEqual(
+        //         takeLatest(
+        //             ActionTypesRefreshToken.GET_REFRESH_TOKEN_REQUEST,
+        //             refreshTokenSaga
+        //         )
+        //     )
+    })
     // it('should start task to watch for SET_ERROR action.', () => {
     //     const takeLatestDescriptor = authenticationRootSagaData.next().value
     //     expect(takeLatestDescriptor).toEqual(

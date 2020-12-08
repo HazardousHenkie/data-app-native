@@ -11,8 +11,8 @@ describe('<LanguageSwitcher />', () => {
     })
 
     // it("gets initial language and it's being passed", () => {
-    //     const { getByText } = render(<LanguageSwitcher />)
-    //     const selectInput = getByText('en')
+    //     const { getByTestId } = render(<LanguageSwitcher />)
+    //     const selectInput = getByTestId('languageSwitcher_select')
     //     console.log(selectInput)
     //     expect(selectInput).toHaveProperty('value', 'en')
     // })
@@ -25,6 +25,7 @@ describe('<LanguageSwitcher />', () => {
     //     expect(container.querySelector('input')).toHaveProperty('value', 'ja')
     //     expect(getByRole('button')).toHaveTextContent('ja')
     // })
+
     // it('Check listitems', () => {
     //     const { getByRole, getAllByRole } = render(<LanguageSwitcher />)
     //     fireEvent.mouseDown(getByRole('button'))

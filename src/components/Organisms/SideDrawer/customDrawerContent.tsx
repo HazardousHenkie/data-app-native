@@ -13,7 +13,7 @@ const CustomDrawerContent = (
     props: DrawerContentComponentProps<DrawerContentOptions>
 ) => {
     return (
-        <DrawerContentScrollView {...props}>
+        <DrawerContentScrollView data-testid="CustomDrawerContent" {...props}>
             <DrawerItemList {...props} />
             <LanguageSwitcher />
         </DrawerContentScrollView>

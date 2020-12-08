@@ -26,7 +26,6 @@ const LanguageSwitcher: React.FC = () => {
             <LanguageSwitcherWrapper data-testid="languageSwitcher">
                 <RNPickerSelect
                     placeholder={{}}
-                    data-testid="languageSwitcher_select"
                     value={i18n.language}
                     onValueChange={onLocaleToggle}
                     disabled={loadingLanguage}

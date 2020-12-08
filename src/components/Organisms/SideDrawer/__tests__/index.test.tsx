@@ -1,54 +1,52 @@
-// import React from 'react'
-// import { render, fireEvent } from 'utils/test-utils'
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { render } from '../../../../utils/test-utils'
 
-// import StyledDrawer, { DrawerChildren } from '../styledComponents'
-
-// import SideDrawer from '../index'
+import SideDrawer from '../index'
 
 describe('<SideDrawer />', () => {
     it('should render like snapshot', () => {
-        //         const component = render(<SideDrawer />)
-        //         expect(component).toMatchSnapshot()
+        const component = render(
+            <NavigationContainer>
+                <SideDrawer />
+            </NavigationContainer>
+        )
+        expect(component).toMatchSnapshot()
     })
 
-    //     it('should render IconButtonStyled', () => {
-    //         const { getByTestId } = render(<SideDrawer />)
+    it('should render CustomDrawerContent', () => {
+        const { getByTestId } = render(
+            <NavigationContainer>
+                <SideDrawer />
+            </NavigationContainer>
+        )
 
-    //         const IconButtonStyled = getByTestId('IconButtonStyled')
+        const CustomDrawerContent = getByTestId('CustomDrawerContent')
 
-    //         expect(IconButtonStyled).toBeInTheDocument()
-    //     })
+        expect(CustomDrawerContent).toBeInTheDocument()
+    })
 
-    //     it('should render aria-label on IconButtonStyled', () => {
-    //         const { getByLabelText } = render(<SideDrawer />)
+    it('should render HomeScreen', () => {
+        const { getByTestId } = render(
+            <NavigationContainer>
+                <SideDrawer />
+            </NavigationContainer>
+        )
 
-    //         const listLabel = getByLabelText('open drawer')
+        const HomeScreen = getByTestId('HomeScreen')
 
-    //         expect(listLabel).toBeInTheDocument()
-    //     })
+        expect(HomeScreen).toBeInTheDocument()
+    })
 
-    //     it('should render StyledDrawer when IconButtonStyled is clicked', () => {
-    //         const { getByTestId } = render(<SideDrawer />)
+    it('should render AboutScreen', () => {
+        const { getByTestId } = render(
+            <NavigationContainer>
+                <SideDrawer />
+            </NavigationContainer>
+        )
 
-    //         const IconButtonStyled = getByTestId('IconButtonStyled')
-    //         fireEvent.click(IconButtonStyled)
-    //         const StyledDrawerButton = getByTestId('StyledDrawer')
+        const AboutScreen = getByTestId('AboutScreen')
 
-    //         expect(StyledDrawerButton).toBeInTheDocument()
-    //     })
-
-    //     it('It shouldn render StyledDrawer DrawerChildren', () => {
-    //         const { getByText, getByTestId } = render(
-    //             <SideDrawer>
-    //                 <StyledDrawer anchor="left" open>
-    //                     <DrawerChildren>children</DrawerChildren>
-    //                 </StyledDrawer>
-    //             </SideDrawer>
-    //         )
-
-    //         const IconButtonStyled = getByTestId('IconButtonStyled')
-    //         fireEvent.click(IconButtonStyled)
-
-    //         expect(getByText('children')).toBeInTheDocument()
-    //     })
+        expect(AboutScreen).toBeInTheDocument()
+    })
 })

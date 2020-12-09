@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 import MapViewStyled from './styledComponents'
 import HamburgerIcon from '../../Molecules/HamburgerIcon'
 
 const HomeScreen = () => {
     return (
-        <View data-testid="HomeScreen">
+        <View testID="HomeScreen">
+            <Text>HomePage</Text>
             <HamburgerIcon />
             <MapViewStyled />
         </View>

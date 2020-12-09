@@ -23,7 +23,7 @@ const LanguageSwitcher: React.FC = () => {
 
     return (
         <>
-            <LanguageSwitcherWrapper data-testid="languageSwitcher">
+            <LanguageSwitcherWrapper testID="languageSwitcher">
                 <RNPickerSelect
                     placeholder={{}}
                     value={i18n.language}

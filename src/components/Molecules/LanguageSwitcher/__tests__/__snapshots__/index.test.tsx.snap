@@ -12,7 +12,7 @@ exports[`<LanguageSwitcher /> Should render like snapshot 1`] = `
 >
   <View
     className="sc-bdfBwQ jSBXlJ"
-    data-testid="languageSwitcher"
+    testID="languageSwitcher"
   >
     <View
       style={

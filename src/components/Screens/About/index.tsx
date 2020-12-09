@@ -5,7 +5,7 @@ import HamburgerIcon from '../../Molecules/HamburgerIcon'
 
 const AboutScreen = () => {
     return (
-        <View data-testid="AboutScreen">
+        <View testID="AboutScreen">
             <HamburgerIcon />
             <Text>about</Text>
         </View>

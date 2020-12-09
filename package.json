@@ -74,7 +74,7 @@
     "ios": "expo start --ios",
     "web": "expo web",
     "eject": "expo eject",
-    "test": "jest",
+    "test": "jest --watch",
     "lint:staged": "lint-staged",
     "typecheck": "tsc",
     "lint": "npm run typecheck && npm run lint:css && npm run lint:eslint",
@@ -100,7 +100,10 @@
     }
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ]
   },
   "private": true
 }

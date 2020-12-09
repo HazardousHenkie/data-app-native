@@ -2,3 +2,4 @@ coverage
 babel.config.js
 .eslintrc.js
 index.js
+jest/setup.js

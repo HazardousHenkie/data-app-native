@@ -27,7 +27,9 @@ const App: React.FC = () => {
                     <ThemeProvider theme={variables}>
                         <PaperProvider theme={darkTheme}>
                             <View>
-                                <Text>{t('app:descriptionTitle', 'test')}</Text>
+                                <Text>
+                                    {t('app:descriptionTitle', 'Data app')}
+                                </Text>
                             </View>
                             <DrawerNavigation />
                         </PaperProvider>

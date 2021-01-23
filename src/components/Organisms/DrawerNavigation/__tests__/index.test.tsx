@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { render, fireEvent } from '@testing-library/react-native'
+import { render, fireEvent, act } from '@testing-library/react-native'
 
 import { NavigationContainer } from '@react-navigation/native'
 import SideDrawer from '../index'
@@ -34,7 +34,11 @@ describe('<SideDrawer />', () => {
                 <SideDrawer />
             </NavigationContainer>
         )
-        fireEvent.press(getByText('About'))
+
+        act(() => {
+            fireEvent.press(getByText('About'))
+        })
+
         const AboutScreen = await getByTestId('AboutScreen')
 
         expect(AboutScreen).toBeTruthy()

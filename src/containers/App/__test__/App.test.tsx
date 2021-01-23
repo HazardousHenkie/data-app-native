@@ -1,4 +1,9 @@
-// import React from 'react'
+import { render } from '@testing-library/react-native'
+import React from 'react'
+
+import i18n from '../../../utils/i18n'
+
+import App from '../App'
 
 // import { render } from 'utils/test-utils'
 
@@ -18,6 +23,9 @@ describe('<App />', () => {
     // })
 
     it('should dispatch getRefreshTokenRequest when localStorage.getItem is set', () => {
+        const { getByText } = render(<App />)
+        i18n.changeLanguage('jp')
+        getByText('test')
         //     const store = configureStore({ authenticationData: { loggedIn: true } })
         //     const userId = '12'
         //     store.dispatch = jest.fn()

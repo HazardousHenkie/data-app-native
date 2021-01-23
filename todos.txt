@@ -1,7 +1,3 @@
 // testing libraries 
 // all other libraries
-// resolve src
 // add splashscreen
-// check auto 91next parser in native
-
-https://www.smashingmagazine.com/2020/09/unit-testing-react-native-applications/

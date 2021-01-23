@@ -7,15 +7,12 @@ import {
     DrawerItemList,
 } from '@react-navigation/drawer'
 
-import LanguageSwitcher from '../../Molecules/LanguageSwitcher'
-
 const CustomDrawerContent = (
     props: DrawerContentComponentProps<DrawerContentOptions>
 ) => {
     return (
         <DrawerContentScrollView testID="CustomDrawerContent" {...props}>
             <DrawerItemList {...props} />
-            <LanguageSwitcher />
         </DrawerContentScrollView>
     )
 }

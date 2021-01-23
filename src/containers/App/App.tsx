@@ -8,7 +8,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { useTranslation } from 'react-i18next'
 import { Text, View } from 'react-native'
 import { ThemeProvider } from 'styled-components'
-import SideDrawer from '../../components/Organisms/SideDrawer'
+import DrawerNavigation from '../../components/Organisms/DrawerNavigation'
 
 import darkTheme from '../../styles/themeStyles'
 import variables from '../../styles/variables'
@@ -29,7 +29,7 @@ const App: React.FC = () => {
                             <View>
                                 <Text>{t('app:descriptionTitle', 'test')}</Text>
                             </View>
-                            <SideDrawer />
+                            <DrawerNavigation />
                         </PaperProvider>
                     </ThemeProvider>
                 </NavigationContainer>

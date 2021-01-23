@@ -14,7 +14,7 @@ const HamburgerIcon = () => {
     return (
         <IconButtonStyled
             icon="menu"
-            testID="IconButtonStyled"
+            testID="HamburgerIcon"
             aria-label="open drawer"
             onPress={() => openDrawer()}
         />

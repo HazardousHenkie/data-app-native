@@ -9,6 +9,7 @@ import { Provider as PaperProvider } from 'react-native-paper'
 import { I18nextProvider } from 'react-i18next'
 
 import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 import i18n from './i18n'
 
 import darkTheme from '../styles/themeStyles'
@@ -24,8 +25,11 @@ const customRender = (
         // initialState = {},
         // store = configureStore(initialState),
         ...renderOptions
-    } = {}
+    } = {},
+    useNavigator = false
 ) => {
+    const Stack = createStackNavigator()
+
     const Wrapper: React.FC = ({ children }) => {
         return (
             // <Provider store={store}>
@@ -33,7 +37,16 @@ const customRender = (
                 <I18nextProvider i18n={i18n}>
                     <ThemeProvider theme={variables}>
                         <PaperProvider theme={darkTheme}>
-                            {children}
+                            {!useNavigator && children}
+
+                            <Stack.Navigator initialRouteName="Home">
+                                <Stack.Screen
+                                    name="Home"
+                                    component={() =>
+                                        useNavigator ? <>{children}</> : <></>
+                                    }
+                                />
+                            </Stack.Navigator>
                         </PaperProvider>
                     </ThemeProvider>
                 </I18nextProvider>
